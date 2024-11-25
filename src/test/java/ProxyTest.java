@@ -5,12 +5,18 @@ import ucu.edu.ua.task3.ProxyImage;
 import ucu.edu.ua.task3.RealImage;
 
 class ProxyTest {
+
     @Test
     void testLazyLoading() {
-        ProxyImage proxyImage = new ProxyImage("example.jpg");
-        assertNull(getRealImage(proxyImage), "RealImage should not be initialized yet.");
+        String fileName = "example.jpg";
+        ProxyImage proxyImage = new ProxyImage(fileName);
+
+        assertNull(getRealImage(proxyImage),
+                "RealImage should not be initialized yet.");
+
         proxyImage.display();
-        assertNotNull(getRealImage(proxyImage), "RealImage should be initialized after display is called.");
+        assertNotNull(getRealImage(proxyImage),
+                "RealImage should be initialized after display is called.");
     }
 
     private RealImage getRealImage(ProxyImage proxyImage) {
