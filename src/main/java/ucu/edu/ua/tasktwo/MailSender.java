@@ -29,7 +29,8 @@ public class MailSender {
             // Create a message with the specified attributes
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("email"));
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("dobosevych@gmail.com"));
+            message.setRecipients(Message.RecipientType.TO, 
+            InternetAddress.parse("dobosevych@gmail.com"));
             message.setSubject("hello");
             message.setText(mailInfo.generateText());
 

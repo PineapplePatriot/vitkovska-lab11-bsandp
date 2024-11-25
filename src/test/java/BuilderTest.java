@@ -1,10 +1,7 @@
 import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.Assertions;
 import ucu.edu.ua.taskone.Student;
 import ucu.edu.ua.taskone.User;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class BuilderTest {
 
@@ -29,13 +26,13 @@ class BuilderTest {
                 .mark(SECOND_MARK)
                 .build();
 
-        assertEquals(name, student.getName(), 
+        Assertions.assertEquals(name, student.getName(), 
         "Name should match the value provided to the builder.");
-        assertEquals(STUDENT_AGE, student.getAge(), 
+        Assertions.assertEquals(STUDENT_AGE, student.getAge(), 
         "Age should match the value provided to the builder.");
-        assertTrue(student.getGrades().contains(FIRST_MARK), 
+        Assertions.assertTrue(student.getGrades().contains(FIRST_MARK), 
         "Grades should include the first mark.");
-        assertTrue(student.getGrades().contains(SECOND_MARK), 
+        Assertions.assertTrue(student.getGrades().contains(SECOND_MARK), 
         "Grades should include the second mark.");
     }
 
@@ -52,13 +49,13 @@ class BuilderTest {
                 .height(USER_HEIGHT)
                 .build();
 
-        assertEquals(name, user.getName(), 
+        Assertions.assertEquals(name, user.getName(), 
         "Name should match the value provided to the builder.");
-        assertEquals(USER_AGE, user.getAge(), 
+        Assertions.assertEquals(USER_AGE, user.getAge(), 
         "Age should match the value provided to the builder.");
-        assertEquals(USER_WEIGHT, user.getWeight(), 
+        Assertions.assertEquals(USER_WEIGHT, user.getWeight(), 
         "Weight should match the value provided to the builder.");
-        assertEquals(USER_HEIGHT, user.getHeight(), 
+        Assertions.assertEquals(USER_HEIGHT, user.getHeight(), 
         "Height should match the value provided to the builder.");
     }
 }

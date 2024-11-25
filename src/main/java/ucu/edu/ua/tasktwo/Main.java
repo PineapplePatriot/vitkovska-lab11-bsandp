@@ -1,10 +1,12 @@
 package ucu.edu.ua.tasktwo;
 
 public class Main {
+
+    private static final int CLIENT_AGE = 100;
     public static void main(String[] args) {
         Client client = Client.builder()
         .name("Client Name")
-        .age(100)
+        .age(CLIENT_AGE)
         .mail("test@client.mail")
         .build();
 

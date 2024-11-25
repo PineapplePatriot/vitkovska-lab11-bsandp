@@ -1,10 +1,8 @@
 import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.Assertions;
 import ucu.edu.ua.taskthree.ProxyImage;
 import ucu.edu.ua.taskthree.RealImage;
 
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class ProxyTest {
 
@@ -13,11 +11,11 @@ class ProxyTest {
         String fileName = "example.jpg";
         ProxyImage proxyImage = new ProxyImage(fileName);
 
-        assertNull(getRealImage(proxyImage),
+        Assertions.assertNull(getRealImage(proxyImage),
                 "RealImage should not be initialized yet.");
 
         proxyImage.display();
-        assertNotNull(getRealImage(proxyImage),
+        Assertions.assertNotNull(getRealImage(proxyImage),
                 "RealImage should be initialized after display is called.");
     }
 

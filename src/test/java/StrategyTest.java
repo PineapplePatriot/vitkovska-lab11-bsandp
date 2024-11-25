@@ -1,12 +1,11 @@
 import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.Assertions;
 import ucu.edu.ua.tasktwo.BirthdayMailCode;
 import ucu.edu.ua.tasktwo.Client;
 import ucu.edu.ua.tasktwo.GiftMailCode;
 import ucu.edu.ua.tasktwo.MailCode;
 import ucu.edu.ua.tasktwo.MailInfo;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StrategyTest {
 
@@ -26,7 +25,7 @@ class StrategyTest {
         MailCode birthdayMailCode = new BirthdayMailCode();
         String message = birthdayMailCode.generateText(client);
 
-        assertEquals("Dear John, Happy Birthday!", message,
+        Assertions.assertEquals("Dear John, Happy Birthday!", message,
                 "BirthdayMailCode did not generate the expected message.");
     }
 
@@ -42,7 +41,7 @@ class StrategyTest {
         MailCode giftMailCode = new GiftMailCode();
         String message = giftMailCode.generateText(client);
 
-        assertEquals("John, you've received a gift.", message,
+        Assertions.assertEquals("John, you've received a gift.", message,
                 "GiftMailCode did not generate the expected message.");
     }
 
@@ -59,7 +58,7 @@ class StrategyTest {
         MailInfo mailInfo = new MailInfo(client, mailCode);
         String generatedText = mailInfo.generateText();
 
-        assertEquals("Dear John, Happy Birthday!", generatedText,
+        Assertions.assertEquals("Dear John, Happy Birthday!", generatedText,
                 "MailInfo did not delegate correctly to MailCode.");
     }
 }
