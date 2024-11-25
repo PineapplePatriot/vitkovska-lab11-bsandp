@@ -1,8 +1,10 @@
 import org.junit.jupiter.api.Test;
+
+import ucu.edu.ua.taskone.Student;
+import ucu.edu.ua.taskone.User;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import ucu.edu.ua.task1.Student;
-import ucu.edu.ua.task1.User;
 
 class BuilderTest {
 
@@ -27,10 +29,14 @@ class BuilderTest {
                 .mark(SECOND_MARK)
                 .build();
 
-        assertEquals(name, student.getName(), "Name should match the value provided to the builder.");
-        assertEquals(STUDENT_AGE, student.getAge(), "Age should match the value provided to the builder.");
-        assertTrue(student.getGrades().contains(FIRST_MARK), "Grades should include the first mark.");
-        assertTrue(student.getGrades().contains(SECOND_MARK), "Grades should include the second mark.");
+        assertEquals(name, student.getName(), 
+        "Name should match the value provided to the builder.");
+        assertEquals(STUDENT_AGE, student.getAge(), 
+        "Age should match the value provided to the builder.");
+        assertTrue(student.getGrades().contains(FIRST_MARK), 
+        "Grades should include the first mark.");
+        assertTrue(student.getGrades().contains(SECOND_MARK), 
+        "Grades should include the second mark.");
     }
 
     @Test
@@ -46,9 +52,13 @@ class BuilderTest {
                 .height(USER_HEIGHT)
                 .build();
 
-        assertEquals(name, user.getName(), "Name should match the value provided to the builder.");
-        assertEquals(USER_AGE, user.getAge(), "Age should match the value provided to the builder.");
-        assertEquals(USER_WEIGHT, user.getWeight(), "Weight should match the value provided to the builder.");
-        assertEquals(USER_HEIGHT, user.getHeight(), "Height should match the value provided to the builder.");
+        assertEquals(name, user.getName(), 
+        "Name should match the value provided to the builder.");
+        assertEquals(USER_AGE, user.getAge(), 
+        "Age should match the value provided to the builder.");
+        assertEquals(USER_WEIGHT, user.getWeight(), 
+        "Weight should match the value provided to the builder.");
+        assertEquals(USER_HEIGHT, user.getHeight(), 
+        "Height should match the value provided to the builder.");
     }
 }

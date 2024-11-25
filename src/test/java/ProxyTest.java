@@ -1,8 +1,10 @@
 import org.junit.jupiter.api.Test;
+
+import ucu.edu.ua.taskthree.ProxyImage;
+import ucu.edu.ua.taskthree.RealImage;
+
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import ucu.edu.ua.task3.ProxyImage;
-import ucu.edu.ua.task3.RealImage;
 
 class ProxyTest {
 

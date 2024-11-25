@@ -1,10 +1,12 @@
 import org.junit.jupiter.api.Test;
+
+import ucu.edu.ua.tasktwo.BirthdayMailCode;
+import ucu.edu.ua.tasktwo.Client;
+import ucu.edu.ua.tasktwo.GiftMailCode;
+import ucu.edu.ua.tasktwo.MailCode;
+import ucu.edu.ua.tasktwo.MailInfo;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import ucu.edu.ua.task2.Client;
-import ucu.edu.ua.task2.BirthdayMailCode;
-import ucu.edu.ua.task2.GiftMailCode;
-import ucu.edu.ua.task2.MailCode;
-import ucu.edu.ua.task2.MailInfo;
 
 class StrategyTest {
 
