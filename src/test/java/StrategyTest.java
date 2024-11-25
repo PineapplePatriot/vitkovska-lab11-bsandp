@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import ucu.edu.ua.task2.Client;
 import ucu.edu.ua.task2.BirthdayMailCode;
 import ucu.edu.ua.task2.GiftMailCode;

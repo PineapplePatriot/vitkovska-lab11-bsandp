@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import ucu.edu.ua.task3.ProxyImage;
 import ucu.edu.ua.task3.RealImage;
 
